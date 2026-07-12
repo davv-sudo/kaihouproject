@@ -1,0 +1,104 @@
+backend:
+  name: github
+  repo: davv-sudo/kaihouproject
+  branch: main
+  base_url: https://sveltia-cms-auth.davidyakobi228.workers.dev
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+i18n:
+  structure: multiple_folders
+  locales: [en, fr, es]
+  default_locale: en
+
+collections:
+  - name: "home"
+    label: "Home"
+    files:
+      - name: "home"
+        label: "Hero"
+        file: "src/content/pages/home.en.yaml"
+        i18n: true
+        fields:
+          - { label: "Titulo Hero", name: "heroTitle", widget: "string" }
+          - { label: "Subtitulo Hero", name: "heroSubtitle", widget: "string" }
+
+  - name: "about"
+    label: "About"
+    files:
+      - name: "about"
+        label: "About"
+        file: "src/content/pages/about.en.md"
+        i18n: true
+        fields:
+          - { label: "Titulo", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "contact"
+    label: "Contact"
+    files:
+      - name: "contact"
+        label: "Contacto"
+        file: "src/content/pages/contact.en.yaml"
+        i18n: true
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Chat", name: "chat", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "string" }
+
+  - name: "team"
+    label: "Team"
+    folder: "src/content/team"
+    create: true
+    i18n: true
+    extension: yaml
+    format: yaml
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Rol", name: "rol", widget: "string" }
+      - { label: "Foto", name: "foto", widget: "image", required: false }
+
+  - name: "services"
+    label: "Services"
+    folder: "src/content/services"
+    create: true
+    i18n: true
+    extension: yaml
+    format: yaml
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Descripcion", name: "descripcion", widget: "text" }
+
+  - name: "partners"
+    label: "Partners"
+    folder: "src/content/partners"
+    create: true
+    i18n: true
+    extension: yaml
+    format: yaml
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image", required: false }
+      - { label: "URL", name: "url", widget: "string" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    i18n: true
+    fields:
+      - { label: "Titulo", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "faq"
+    label: "FAQ"
+    folder: "src/content/faq"
+    create: true
+    i18n: true
+    extension: yaml
+    format: yaml
+    fields:
+      - { label: "Pregunta", name: "pregunta", widget: "string" }
+      - { label: "Respuesta", name: "respuesta", widget: "text" }

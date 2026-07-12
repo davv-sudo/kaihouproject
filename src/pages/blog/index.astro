@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+const posts = allPosts
+    .filter((p) => p.id.startsWith("en/"))
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="Blog">
+    <section id="blog-list">
+        <h1>Blog</h1>
+        <div class="grid">
+            {
+                posts.map((post) => {
+                    const slug = post.id.replace("en/", "").replace(".md", "");
+                    return (
+                        <a href={`/blog/${slug}`} class="card">
+                            <h2>{post.data.title}</h2>
+                            <time>{post.data.date.toLocaleDateString()}</time>
+                        </a>
+                    );
+                })
+            }
+        </div>
+    </section>
+</Layout>

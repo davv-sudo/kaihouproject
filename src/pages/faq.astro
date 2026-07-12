@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("faq");
+const items = all.filter((f) => f.id.startsWith("en/"));
+---
+
+<Layout title="FAQ">
+    <section>
+        <h1>FAQ</h1>
+        <div class="faq-list">
+            {
+                items.map((f) => (
+                    <details class="card">
+                        <summary>{f.data.pregunta}</summary>
+                        <p>{f.data.respuesta}</p>
+                    </details>
+                ))
+            }
+        </div>
+    </section>
+</Layout>
