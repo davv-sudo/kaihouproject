@@ -2,55 +2,59 @@
 title : À propos de Kaihou Project
 ---
 
-Kaihou Languages supports open-source projects through language and
+Kaihou Languages soutient les projets open source grâce à la langue et à la
 communication.
 
-We help developers, small teams, and emerging initiatives overcome language
-barriers with translation, interpreting, and coordinated linguistic support.
+Nous aidons les développeurs, les petites équipes et les initiatives émergentes
+à surmonter les barrières linguistiques grâce à la traduction, à
+l’interprétation et à un soutien linguistique coordonné.
 
-Localization platforms like Weblate provide infrastructure. But one problem
-remains: who actually does the translations?
+Les plateformes de localisation comme Weblate fournissent une infrastructure.
+Mais un problème subsiste : qui réalise réellement les traductions ?
 
-Most projects internationalize late — after they already have users, after the
-codebase is mature, after growth has plateaued in a single language.
+La plupart des projets s’internationalisent tard — après qu’ils aient déjà des
+utilisateurs, après que la base de code soit mature, après que la croissance se
+soit stabilisée dans une seule langue.
 
-**We think it should work differently**.
+**Nous pensons que cela devrait fonctionner différemment**.
 
-If a project partners with Kaihou from its beginning, it can start collaborating
-with international contributors immediately, in every language we support. It
-grows global from day one, instead of retrofitting translation once it's already
-big.
+Si un projet s’associe à Kaihou dès le début, il peut commencer à collaborer
+avec des contributeurs internationaux immédiatement, dans toutes les langues que
+nous supportons. Il devient global dès le premier jour, au lieu d’ajouter la
+traduction une fois qu’il est déjà important.
 
-## Our Approach
+## Notre approche
 
-Localization tools solve the technical problem. Translation agencies solve
-isolated jobs. Neither solves the coordination problem — having a team that
-grows **with** the project, understands its context, and stays involved over
-time.
+Les outils de localisation résolvent le problème technique. Les agences de
+traduction résolvent des tâches isolées. Aucun ne résout le problème de
+coordination — disposer d’une équipe qui grandit **avec** le projet, comprend
+son contexte et reste impliquée au fil du temps.
 
-Kaihou Languages is that team.
+Kaihou Languages est cette équipe.
 
-- A small, consistent group of translators
-- Contributors who understand your project, not just your strings
-- Ongoing collaboration, not one-off jobs
+- Un petit groupe constant de traducteurs
+- Contributeurs qui comprennent votre projet, pas seulement vos chaînes
+- Collaboration continue, pas de missions ponctuelles
 
-## Our Philosophy
+## Notre philosophie
 
-We don't build software. We work closely with developers on the linguistic side
-of their tools, and build language infrastructure for projects that want to
-belong to the world from the start.
+Nous ne développons pas de logiciels. Nous travaillons en étroite collaboration
+avec les développeurs sur le volet linguistique de leurs outils, et nous
+construisons des infrastructures linguistiques pour les projets qui souhaitent
+appartenir au monde dès le départ.
 
-## How It Works
+## Comment ça fonctionne
 
-Kaihou Languages follows a simple and sustainable model.
+Kaihou Languages suit un modèle simple et durable.
 
-**Open projects** get 100% free services, no obligations, and direct
-collaboration with a linguistic team — ideally from day one. We integrate into
-your existing workflow, whether that's Weblate, self-hosted tools, or a simple
-custom setup.
+**Projets ouverts** obtenez des services 100 % gratuits, sans engagement, et une
+collaboration directe avec une équipe linguistique — idéalement dès le premier
+jour. Nous nous intégrons à votre flux de travail existant, que ce soit Weblate,
+des outils auto‑hébergés, ou une configuration personnalisée simple.
 
-**Private clients** get affordable translation, interpreting, and linguistic
-support. This is what sustains the project, lets us improve continuously, and
-keeps our support for open initiatives genuinely free.
+**Clients privés** obtiennent des services de traduction, d’interprétation et de
+soutien linguistique abordables. C’est ce qui soutient le projet, nous permet
+d’améliorer continuellement, et maintient notre soutien aux initiatives ouvertes
+réellement gratuit.
 
-Free for open projects. Sustained by private work.
+Gratuit pour les projets ouverts. Soutenu par le travail privé.
