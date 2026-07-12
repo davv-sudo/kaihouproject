@@ -1,5 +1,5 @@
 ---
-title: About Kaihou Project
+title: Acerca de Kaihou Project
 ---
 
-Kaihou Project removes language barriers in open source projects.
+Kaihou Project elimina barreras lingüísticas en proyectos de código abierto.
