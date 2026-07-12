@@ -20,11 +20,9 @@ Localization tools solve the technical problem. Translation agencies solve isola
 
 Kaihou Languages is that team.
 
-> A small, consistent group of translators
-
-> Contributors who understand your project, not just your strings
-
-> Ongoing collaboration, not one-off jobs
+- A small, consistent group of translators
+- Contributors who understand your project, not just your strings
+- Ongoing collaboration, not one-off jobs
 
 ## Our Philosophy
 
@@ -34,8 +32,8 @@ We don't build software. We work closely with developers on the linguistic side 
 
 Kaihou Languages follows a simple and sustainable model.
 
-> **Open projects** get 100% free services, no obligations, and direct collaboration with a linguistic team — ideally from day one. We integrate into your existing workflow, whether that's Weblate, self-hosted tools, or a simple custom setup.
+**Open projects** get 100% free services, no obligations, and direct collaboration with a linguistic team — ideally from day one. We integrate into your existing workflow, whether that's Weblate, self-hosted tools, or a simple custom setup.
 
-> **Private clients** get affordable translation, interpreting, and linguistic support. This is what sustains the project, lets us improve continuously, and keeps our support for open initiatives genuinely free.
+**Private clients** get affordable translation, interpreting, and linguistic support. This is what sustains the project, lets us improve continuously, and keeps our support for open initiatives genuinely free.
 
 Free for open projects. Sustained by private work.
