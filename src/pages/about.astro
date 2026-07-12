@@ -12,7 +12,9 @@ if (about) {
 
 <Layout title="About">
     <section>
-        <h1>About</h1>
-        {Content && <Content />}
+        <div class="prose">
+            <h1>{about?.data.title}</h1>
+            {Content && <Content />}
+        </div>
     </section>
 </Layout>
