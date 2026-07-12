@@ -9,7 +9,7 @@ public_folder: "/uploads"
 
 i18n:
   structure: multiple_folders
-  locales: [en, fr, es]
+  locales: [en]
   default_locale: en
 
 collections:
