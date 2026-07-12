@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("partners");
+const partners = all.filter((p) => p.id.startsWith("es/"));
+---
+
+<Layout title="Partners">
+    <section>
+        <h1>Partners</h1>
+        <div class="grid">
+            {
+                partners.map((p) => (
+                    <a href={p.data.url} class="card">
+                        <h2>{p.data.nombre}</h2>
+                    </a>
+                ))
+            }
+        </div>
+    </section>
+</Layout>

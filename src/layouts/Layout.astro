@@ -6,6 +6,22 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const path = Astro.url.pathname;
+const pathWithoutLocale = path.replace(/^\/(fr|es)/, "") || "/";
+
+const currentLocale = path.startsWith("/fr")
+    ? "fr"
+    : path.startsWith("/es")
+      ? "es"
+      : "en";
+const prefix = currentLocale === "en" ? "" : `/${currentLocale}`;
+
+const langLinks = {
+    en: pathWithoutLocale,
+    fr: `/fr${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`,
+    es: `/es${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`,
+};
 ---
 
 <!doctype html>
@@ -19,18 +35,18 @@ const { title } = Astro.props;
         <nav>
             <a href="/" class="brand">Kaihou Project</a>
             <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/services">Services</a>
-                <a href="/team">Team</a>
-                <a href="/partners">Partners</a>
-                <a href="/blog">Blog</a>
-                <a href="/faq">FAQ</a>
-                <a href="/contact">Contact</a>
+                <a href={`${prefix}/`}>Home</a>
+                <a href={`${prefix}/about`}>About</a>
+                <a href={`${prefix}/services`}>Services</a>
+                <a href={`${prefix}/team`}>Team</a>
+                <a href={`${prefix}/partners`}>Partners</a>
+                <a href={`${prefix}/blog`}>Blog</a>
+                <a href={`${prefix}/faq`}>FAQ</a>
+                <a href={`${prefix}/contact`}>Contact</a>
             </div>
             <div class="lang-switch">
-                <a href="/">EN</a> | <a href="/fr/">FR</a> | <a href="/es/"
-                    >ES</a
+                <a href={langLinks.en}>EN</a> | <a href={langLinks.fr}>FR</a> | <a
+                    href={langLinks.es}>ES</a
                 >
             </div>
         </nav>

@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("services");
+const services = all.filter((s) => s.id.startsWith("fr/"));
+---
+
+<Layout title="Services">
+    <section>
+        <h1>Services</h1>
+        <div class="grid">
+            {
+                services.map((s) => (
+                    <div class="card">
+                        <h2>{s.data.nombre}</h2>
+                        <p>{s.data.descripcion}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+</Layout>

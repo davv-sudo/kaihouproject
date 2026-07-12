@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntry, render } from "astro:content";
+
+const about = await getEntry("pages", "about.fr");
+let Content = null;
+if (about) {
+    const rendered = await render(about);
+    Content = rendered.Content;
+}
+---
+
+<Layout title="About">
+    <section>
+        <h1>{about?.data.title}</h1>
+        {Content && <Content />}
+    </section>
+</Layout>

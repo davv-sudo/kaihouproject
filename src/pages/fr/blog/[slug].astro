@@ -1,0 +1,28 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("blog");
+    const posts = allPosts.filter((p) => p.id.startsWith("fr/"));
+
+    return posts.map((post) => {
+        const slug = post.id.replace("fr/", "").replace(".md", "");
+        return {
+            params: { slug },
+            props: { post },
+        };
+    });
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+    <article>
+        <h1>{post.data.title}</h1>
+        <time>{post.data.date.toLocaleDateString()}</time>
+        <Content />
+    </article>
+</Layout>

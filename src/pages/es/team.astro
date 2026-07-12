@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("team");
+const team = all.filter((t) => t.id.startsWith("es/"));
+---
+
+<Layout title="Team">
+    <section>
+        <h1>Team</h1>
+        <div class="grid">
+            {
+                team.map((m) => (
+                    <div class="card">
+                        <div class="avatar" />
+                        <h2>{m.data.nombre}</h2>
+                        <p>{m.data.rol}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+</Layout>

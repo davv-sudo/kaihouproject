@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntry } from "astro:content";
+
+const contact = await getEntry("pages", "contact.es");
+---
+
+<Layout title="Contact">
+    <section id="contact">
+        <h1>Contact</h1>
+        {
+            contact && (
+                <div
+                    class="card"
+                    style="max-width: 500px; margin-inline: auto;"
+                >
+                    <p>{contact.data.intro}</p>
+                    <p>
+                        Email:{" "}
+                        <a href={`mailto:${contact.data.email}`}>
+                            {contact.data.email}
+                        </a>
+                    </p>
+                    <p>Chat: {contact.data.chat}</p>
+                </div>
+            )
+        }
+    </section>
+</Layout>

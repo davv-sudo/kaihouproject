@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntry } from "astro:content";
+
+const home = await getEntry("pages", "home.fr");
+---
+
+<Layout title="Home">
+    <section id="hero">
+        <h1>{home?.data.heroTitle}</h1>
+        <p>{home?.data.heroSubtitle}</p>
+    </section>
+</Layout>
