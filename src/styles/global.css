@@ -1,3 +1,4 @@
+/* ===== VARIABLES DE COLOR ===== */
 :root {
   --bg: #0a0a0a;
   --card: #1a1a1a;
@@ -5,12 +6,64 @@
   --text: #e0e0e0;
 }
 
+/* ===== RESET BASICO ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ===== ESTILOS BASE DEL BODY ===== */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* ===== CONTENEDOR CENTRADO (usado en <main>) ===== */
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+  padding-block: 3rem;
+  animation: fade-in 0.4s ease-out;
+}
+
+section > h1,
+section > h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== HERO (portada / home) ===== */
 #hero {
   min-height: 90vh;
   display: flex;
@@ -37,53 +90,7 @@
   max-width: 40ch;
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  max-width: 960px;
-  margin-inline: auto;
-  padding-inline: 2rem;
-}
-
-section {
-  padding-block: 3rem;
-}
-
-a {
-  transition: opacity 0.2s ease;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-section {
-  animation: fade-in 0.4s ease-out;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* ===== CARDS EN GRID (services, team, partners, blog) ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -97,6 +104,15 @@ section {
   padding: 1.5rem;
   text-align: center;
 }
+
+.card time {
+  display: block;
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* ===== AVATAR (placeholder de foto en team) ===== */
 .avatar {
   width: 80px;
   height: 80px;
@@ -105,16 +121,7 @@ section {
   background: var(--border);
 }
 
-section > h1,
-section > h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-
-
-
-
+/* ===== POST DE BLOG INDIVIDUAL ===== */
 article {
   max-width: 65ch;
   margin-inline: auto;
@@ -138,13 +145,7 @@ article p {
   margin-bottom: 1.2rem;
 }
 
-.card time {
-  display: block;
-  color: #888;
-  font-size: 0.85rem;
-  margin-top: 0.5rem;
-}
-
+/* ===== FAQ (acordeon con <details>) ===== */
 .faq-list {
   max-width: 700px;
   margin-inline: auto;
@@ -161,4 +162,36 @@ article p {
 .faq-list p {
   margin-top: 0.8rem;
   color: #999;
+}
+
+/* ===== RESPONSIVE: TABLET Y MOBILE (768px) ===== */
+/* El nav pasa de fila a columna para que quepan todos los links */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* ===== RESPONSIVE: MOBILE CHICO (600px) ===== */
+/* Menos aire en el hero para no desperdiciar espacio vertical */
+@media (max-width: 600px) {
+  #hero {
+    padding-inline: 1rem;
+  }
+}
+
+/* ===== RESPONSIVE: MOBILE MUY CHICO (480px) ===== */
+/* Menos padding lateral para aprovechar el ancho en pantallas pequenas */
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 1rem;
+  }
 }
