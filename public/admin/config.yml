@@ -23,7 +23,7 @@ collections:
         fields:
           - { label: "Titulo Hero", name: "heroTitle", widget: "string" }
           - { label: "Subtitulo Hero", name: "heroSubtitle", widget: "string" }
-
+          - { label: "Intro", name: "intro", widget: "string" }
   - name: "about"
     label: "About"
     files:

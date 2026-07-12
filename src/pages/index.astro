@@ -9,5 +9,6 @@ const home = await getEntry("pages", "home.en");
     <section id="hero">
         <h1>{home?.data.heroTitle}</h1>
         <p>{home?.data.heroSubtitle}</p>
+        <p>{home?.data.intro}</p>
     </section>
 </Layout>
